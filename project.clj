@@ -6,7 +6,8 @@
   :dependencies [[org.clojure/clojure "1.10.0"]
                  [integrant "0.7.0"]
                  [ring/ring-core "1.7.1"]
-                 [ring/ring-jetty-adapter "1.7.1"]]
+                 [ring/ring-jetty-adapter "1.7.1"]
+                 [camel-snake-kebab "0.4.0"]]
   :main ^:skip-aot simple-clojure-rest.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}})

@@ -1,0 +1,26 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - /var/lib/postgresql/data
+  app:
+    build:
+      context: ../
+      dockerfile: .devcontainer/Dockerfile
+    command: sleep infinity
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+    volumes:
+      - ~/.gitconfig:/root/.gitconfig
+      - ..:/simple-clojure-rest
+      - lib_data:/root/.m2/repository
+    environment:
+      - FOO=bar
+
+volumes:
+  lib_data:

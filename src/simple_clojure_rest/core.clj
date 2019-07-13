@@ -11,7 +11,6 @@
 
 ; handlers
 (defn hello-world [request]
-  ; (println (:params request))
   (response/response {:message "Hello, World!"
                       :params (:params request)}))
 

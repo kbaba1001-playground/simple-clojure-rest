@@ -12,6 +12,8 @@
   ],
   "settings":{
     "calva.jokerPath": "/usr/bin",
+    "parinfer.defaultMode": "disabled",
+    "calva.autoAdjustIndent": true,
     "calva.lintOnSave": true,
     "editor.tabSize": 2,
     "files.insertFinalNewline": true,

@@ -11,4 +11,7 @@
                  [camel-snake-kebab "0.4.0"]]
   :main ^:skip-aot simple-clojure-rest.core
   :target-path "target/%s"
-  :profiles {:uberjar {:aot :all}})
+  :profiles {:uberjar {:aot :all}
+             :dev {:dependencies [[alembic "0.3.2"]
+                                  [philoskim/debux "0.5.6"]]
+                   :injections [(require '[debux.core :refer [dbg dbgn]])]}})
